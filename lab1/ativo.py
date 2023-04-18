@@ -17,7 +17,7 @@ while True:
     if user_msg == 'fim': break
     else:
         sock.send(bytes(user_msg, 'utf-8'))
-        #espera a resposta do par conectado (chamada pode ser BLOQUEANTE)
+        # espera a resposta do par conectado (chamada pode ser BLOQUEANTE)
         msg = sock.recv(1024) # argumento indica a qtde maxima de bytes da mensagem
         # imprime a mensagem recebida
         print('Mensagem recebida: ' + str(msg,  encoding='utf-8'))
