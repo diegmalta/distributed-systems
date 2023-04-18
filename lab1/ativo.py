@@ -1,8 +1,8 @@
-# Exemplo basico socket (lado ativo)
+# Servidor de Echo (lado ativo)
 
 import socket
 
-HOST = '192.168.0.9' # maquina onde esta o par passivo
+HOST = 'localhost'  # maquina onde esta o par passivo
 PORTA = 5060        # porta que o par passivo esta escutando
 
 # cria socket
