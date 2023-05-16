@@ -31,7 +31,7 @@ def aceitaConexao(sock):
 
 #Classes----------------------------------------------------------------------------------
 class Palavra:
-    def _init_(self, chave, valor):
+    def __init__(self, chave, valor):
         self.chave = chave
         self.valores = valor
 #-----------------------------------------------------------------------------------------
