@@ -79,17 +79,9 @@ def listarPalavrasArquivo():
     return palavras
 
 def limparDicionario():
-    # Fecha o arquivo, se estiver aberto
-    try:
-        arquivo = open("dicionario.txt", "w")
-        arquivo.close()
-    except:
-        pass
-
     # Remove o arquivo, se existir
     if os.path.exists("dicionario.txt"):
         os.remove("dicionario.txt")
-
     # Cria um novo arquivo vazio
     arquivo = open("dicionario.txt", "w")
     arquivo.close()
@@ -253,7 +245,7 @@ def sendNewMsg(clisock, newMsg):
     clisock.send(newMsg.encode('utf-8'))
 
 def atendeRequisicoes(clisock, endr):
-    mensagem_completa = b''  # Inicializa uma variável para armazenar a mensagem completa recebida
+    mensagem_completa = b''
     while True:
         while True:
             data = clisock.recv(1024)
